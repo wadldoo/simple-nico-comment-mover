@@ -1,0 +1,9 @@
+{
+    "smId": "1234567890",
+    "mail": "email",
+    "pass": "pass",
+    "comment": {
+        "dispDuration": 5000,
+        "fontSize": "28px"
+    }
+}
