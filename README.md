@@ -15,6 +15,8 @@ Show niconico comments on desktop.
 ### 1. Modify conf.json (email, pass, smId)
 ### 2. Start
     electron .
+    # or
+    ./node_modules/.bin/electron .
 
 ## ToDo
 - seek function

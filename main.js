@@ -22,11 +22,11 @@ app.on('ready', function() {
         frame: false,
         alwaysOnTop: true
     });
-    // mainWindow.setIgnoreMouseEvents(true);
+    mainWindow.setIgnoreMouseEvents(true);
     mainWindow.maximize();
     mainWindow.loadURL('file://' + __dirname + '/index.html');
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
-    mainWindow.openDevTools();
+    // mainWindow.openDevTools();
 });
