@@ -14,13 +14,16 @@ app.on('ready', function() {
     var Screen = require('screen');
     var size = Screen.getPrimaryDisplay().size;
     mainWindow = new BrowserWindow({
+        title: 'NicoCommentMover',
         left: 0,
         top: 0,
         width: size.width,
         height: size.height,
         transparent: true,
         frame: false,
-        alwaysOnTop: true
+        alwaysOnTop: true,
+        resizable: false,
+        hasShadow: false
     });
     mainWindow.setIgnoreMouseEvents(true);
     mainWindow.maximize();
