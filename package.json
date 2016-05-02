@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Just get niconico comments and move",
   "main": "main.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +17,7 @@
   },
   "devDependencies": {
     "electron-prebuilt": "^0.37.8",
+    "eslint": "^2.9.0",
     "querystring": "^0.2.0",
     "request": "^2.72.0",
     "xml2js": "^0.4.16"
