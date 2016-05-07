@@ -28,8 +28,9 @@ function parseXML(xmlStr) {
 
 function moveComments(parsedXML) {
   const size = Screen.getPrimaryDisplay().size,
-        w = size.width,
-        h = size.height;
+        w = size.width * 0.95,
+        h = size.height * 0.95,
+        padding = 64;
 
   const commentsData = parsedXML.packet.chat.map((chat) => ({
     comment: chat._,
@@ -46,7 +47,7 @@ function moveComments(parsedXML) {
     .append('text')
     .text((d) => d.comment)
     .attr('x', w)
-    .attr('y', () => d3.random.bates(0.1)() * h / 10)
+    .attr('y', () => d3.random.bates(0.1)() * (h - 2 * padding) / 10 + padding)
     .attr("font-family", "sans-serif")
     .attr("font-size", conf.comment.fontSize)
     .attr("fill", "white")
