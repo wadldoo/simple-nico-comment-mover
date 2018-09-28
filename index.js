@@ -55,7 +55,7 @@ function moveComments(parsedXML) {
         })
         .attr('x', w)
         .attr('y', function(d) {
-            return d3.random.bates(0.1)() * h / 10;
+            return d3.random.bates(0.1)() * h / 13 + 110;
         })
         .attr("font-family", "sans-serif")
         .attr("font-size", conf.comment.fontSize)
@@ -66,7 +66,7 @@ function moveComments(parsedXML) {
         })
         .duration(conf.comment.displayDuration)
         .delay(function(d) {
-            return d.vpos * 10;
+            return d.vpos * 10 - (conf.start.min * 60 + conf.start.sec) * 1000;
         });
 }
 
